@@ -22,9 +22,10 @@
   <div class="form-group">
     <label>Ваш парикмахер:</label>
     <select name="barber" class="form-control">
-      <option>Jessie Pinkman</option>
-      <option>Walter White</option>
-      <option>Gus Fring</option>
+      <option <%= @barber == 'Jessie Pinkman' ? 'selected' : '' %>>Jessie Pinkman</option>
+      <option <%= @barber == 'Walter White' ? 'selected' : '' %>>Walter White</option> <!-- атрибут selected говорит, что по умолчнанию будет данное значение -->
+      <option <%= @barber == 'Gus Fring' ? 'selected' : '' %>>Gus Fring</option>
+      <!--Получается, когда у нас будет перемнная @barber с каким-то из этих значений, то оно будет сохранятся-->
     </select>
   </div>
 
